@@ -20,7 +20,7 @@ axios.interceptors.response.use(function (response) {
     //console.log(response);
     if(response.data.status === 1 && response.data.message === "身份认证失败！"){
         localStorage.removeItem("token")
-        location.href = "/home/login.html"
+        window.parent.location.href = "/home/login.html"
     }
     return response;
   }, function (error) {

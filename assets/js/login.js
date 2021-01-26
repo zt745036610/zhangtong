@@ -44,10 +44,10 @@ $(function(){
     $(".regiBox form").on("submit",function(e){
         e.preventDefault();
         let data = $(this).serialize() // 收集表单数据
-        console.log(data);
+        // console.log(data);
         // axios
          axios.post("/api/reguser",data).then(res => {
-            console.log(res);
+            // console.log(res);
             if(res.data.status !== 0){
                 //注册失败
                 return layer.msg(res.data.message)  //layer.msg  实现弹框
@@ -61,7 +61,7 @@ $(function(){
         e.preventDefault()
         let data = $(this).serialize()
         axios.post("/api/login",data).then(res=>{
-            console.log(res);
+            // console.log(res);
             if(res.data.status !== 0){
                 //注册失败
                 return layer.msg(res.data.message)  //layer.msg  实现弹框
